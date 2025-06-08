@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: api_produtos
+  server:
+    port: 8080
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/produtos_api
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true  # Exibe as queries no console
+    hibernate:
+      ddl-auto: update  # Garante que a tabela seja criada automaticamente
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        globally_quoted_identifiers: true
+
+  output:
+    ansi:
+      enabled: ALWAYS
